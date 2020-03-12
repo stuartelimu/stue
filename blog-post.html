@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Post - Stuart Elimu</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        article {
+            display: grid;
+            grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr;
+        }
+
+        article * {grid-column: start/end;}
+        /* .size-3 {
+            grid-column: start/end;
+        } */
+
+        figure {
+            grid-column: 1/8;
+            margin: 0;
+        }
+
+        .post-heading { margin-bottom: 1.5rem;}
+
+        .post-heading time {
+            font: 700 1.0rem/1.2 "Roboto", sans-serif;
+            color: hsl(000, 0%, 83%);
+        }
+
+        h1 {
+            font: 700 2.0rem/1.2 "Roboto", sans-serif;color: hsl(000, 0%, 33%);
+        }
+
+        h2 { font: 400 1.5rem/1.2 "Roboto", sans-serif;color: hsl(000, 0%, 33%);}
+
+        h3 { font: 700 1.0rem/1.2 "Roboto", sans-serif;color: hsl(000, 0%, 33%);}
+
+
+        p {
+            font: 400 1.0rem/1.5 "Roboto", sans-serif;
+            color: hsl(000, 0%, 33%);
+        }
+
+        figure img {
+            display: block;
+            width: 100%;
+            
+        }
+
+        figcaption {
+            margin-top: 0.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .center-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 8in) {
+            :root {font-size: 18px;}
+            article {
+                grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
+            }
+        }
+
+        @media (max-width: 5in) {
+            :root {font-size: 16px;}
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <article>
+            <div class="post-heading">
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                <h2>sequi eligendi quasi distinctio adipisci impedit!</h2>
+
+                <time datetime="03-09-2019">Mar 9. 2019</time>
+            </div>
+            <figure>
+                <img src="images/post-header.jpg" alt="boy">
+            </figure>
+            <figcaption>
+                <p>earum aut dolores consectetur</p>
+            </figcaption>
+            <section>
+                <h3>earum aut dolores consectetur</h3>
+                <p>Lorem <em>ipsum</em> dolor sit amet consectetur adipisicing elit. Odit cumque obcaecati dolores quos aliquid magnam voluptatum magni similique. Similique et repellat laboriosam, nesciunt placeat facilis consectetur error autem cupiditate explicabo.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. In laudantium debitis ea laboriosam adipisci at praesentium inventore. Suscipit dignissimos quibusdam neque, sint vel, accusamus quos quisquam obcaecati qui ratione excepturi!
+                </p>
+                <blockquote>
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tempore enim et perferendis error vitae architecto laborum quo."
+                </blockquote>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cumque obcaecati dolores quos aliquid magnam voluptatum magni similique. Similique et repellat laboriosam, nesciunt placeat facilis consectetur error autem cupiditate explicabo.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. In laudantium debitis ea laboriosam adipisci at praesentium inventore. Suscipit dignissimos quibusdam neque, sint vel, accusamus quos quisquam obcaecati <strong>qui ratione excepturi!</strong>
+                </p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
