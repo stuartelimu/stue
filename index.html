@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,35 +9,178 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
 
+
+    <style>
+        .badd {
+            display: grid;
+            grid-auto-columns: 1fr 1fr 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .skills-container {
+            grid-column: 1/2;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .skills {
+            padding: 5rem 0;
+            background-color: #f5f7f8;
+        }
+
+        .logo {
+            width: 17rem;
+            height: 10rem;
+            border: 1px solid #eee;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            border: 1px solid transparent;
+            box-shadow: 0px 8px 30px rgba(118, 85, 225, 0.15);
+        }
+
+
+
+        figure img {
+            max-width: 8rem;
+        }
+
+        .work-exp {
+            grid-column: 2/4;
+        }
+
+        .timeline {
+            position: relative;
+            /* max-width: 1240px; */
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            /* left: 10%; */
+            /* margin-left: 0px; */
+        }
+
+        .work-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 100%;
+        }
+
+        .work-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #ff9f55;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .right {
+            left: 0;
+        }
+
+        .right::before {
+            content: '';
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        /* responsive timeline on screen less than 600px */
+        @media screen and (max-width: 600px) {
+            /* move timeline to left */
+            .timeline::after {
+                left: 31px;
+            }
+
+            .work-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .work-container::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent white;
+            }
+
+            /* put all circles same spot */
+            .right::after {
+                left: 15px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <div class="container">
-        <nav>
-            <div class="nav-brand">
-                <a href="index.html">
-                    <img src="images/stue.png" alt="logo">
-                </a>
-            </div>
-
-            <div class="menu-icon">
-                <span class="bar"></span>
-            </div>
-
-            <div class="nav">
-                <div class="overlay">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="blog-post.html" class="nav-link">Blog</a>
-                        </li>
-                    </ul>
+            <nav>
+                <div class="nav-brand">
+                    <a href="index.html">
+                        <img src="images/stue.png" alt="logo">
+                    </a>
                 </div>
-            </div>
-        </nav>
-    </div>
+
+                <div class="menu-icon">
+                    <span class="bar"></span>
+                </div>
+
+                <div class="nav">
+                    <div class="overlay">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="blog-post.html" class="nav-link">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -45,9 +189,69 @@
                 <div class="main-text">
                     <h1>Hi</h1>
                     <h3>I'm Stuart Elimu</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat porro iusto recusandae reprehenderit laborum! Illo sapiente id eligendi enim saepe praesentium ex ipsam unde, fugit distinctio, corporis dolores, itaque veniam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat porro iusto recusandae
+                        reprehenderit laborum! Illo sapiente id eligendi enim saepe praesentium ex ipsam unde, fugit
+                        distinctio, corporis dolores, itaque veniam.</p>
                     <div class="cta">
                         <a href="#" class="btn">View CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <div class="container badd">
+                <div class="skills-container">
+                    <a href="" class="logo">
+                        <figure>
+                            <img src="images/brands/logo1.png" alt="">
+                        </figure>
+                    </a>
+                    <a href="" class="logo">
+                        <figure>
+                            <img src="images/brands/logo2.png" alt="">
+                        </figure>
+                    </a>
+                    <a href="" class="logo">
+                        <figure>
+                            <img src="images/brands/logo3.png" alt="">
+                        </figure>
+                    </a>
+                    <a href="" class="logo">
+                        <figure>
+                            <img src="images/brands/logo4.png" alt="">
+                        </figure>
+                    </a>
+                    <a href="" class="logo">
+                        <figure>
+                            <img src="images/brands/logo5.png" alt="">
+                        </figure>
+                    </a>
+                    <a href="" class="logo">
+                        <figure>
+                            <img src="images/brands/logo6.png" alt="">
+                        </figure>
+                    </a>
+                </div>
+
+                <div class="work-exp">
+                    <div class="timeline">
+                        <div class="work-container right">
+                            <div class="content">
+                                <h1>2019</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod accusamus minima qui quos iure, aliquid, voluptate ut excepturi exercitationem quaerat ipsam ullam dolorum tempora rerum repellat magni minus nostrum fugit!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="work-container right">
+                                <div class="content">
+                                    <h1>2019</h1>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod accusamus minima qui quos iure, aliquid, voluptate ut excepturi exercitationem quaerat ipsam ullam dolorum tempora rerum repellat magni minus nostrum fugit!
+                                    </p>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -55,6 +259,7 @@
     </main>
 
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>
