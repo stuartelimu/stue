@@ -2,11 +2,11 @@
   font: 10px/1.2 "Ubuntu", sans-serif;
 }
 
-body,
+/* body,
 body * {
   margin: unset;
   box-sizing: unset;
-  /* padding: unset; */
+  padding: unset;
   color: unset;
   text-decoration: unset;
-}
+} */
